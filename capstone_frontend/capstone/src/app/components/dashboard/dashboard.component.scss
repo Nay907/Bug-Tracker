@@ -1,0 +1,45 @@
+.w-100 {
+    width: 100%;
+}
+.container{
+    padding-top: 2%;
+
+
+}
+.align{
+    display: flex;
+    flex-direction: row;
+}
+
+.bug-table {
+    width: 100%; // Full width of the parent container
+    border-collapse: collapse; // Collapse borders
+    margin: 20px 0; // Add margin to the top and bottom
+   
+    th, td {
+       padding: 10px; // Padding inside table cells
+       text-align: left; // Align text to the left
+       border-bottom: 1px solid #ddd; // Light grey bottom border for cells
+    }
+   
+    th {
+       background-color: #f2f2f2; // Light grey background for headers
+       color: #333; // Darker text for headers
+    }
+   
+    tr:nth-child(even) {
+       background-color: #f9f9f9; // Light grey background for even rows
+    }
+   
+    input[type="text"], select {
+       width: 100%; // Full width of the parent cell
+       padding: 5px; // Padding inside inputs and selects
+       border: 1px solid #ddd; // Light grey border
+       border-radius: 4px; // Rounded corners
+    }
+   
+    input[type="radio"] {
+       margin-right: 10px; // Space between radio button and text
+    }
+   }
+   

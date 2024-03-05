@@ -1,0 +1,254 @@
+<!--<p>dashboard</p>
+<div class="container">
+  <div class="card-header"></div>
+  <!--<div class="card-body flex fd_row jc_between">
+    <button class="btn btn-success" (click)="">
+      Add Song
+    </button>
+    <button class="btn btn-danger" (click)="">
+      Delete Songs
+    </button>
+  </div> -->
+  <!--<table class="mat-elevation-z14 w-100">
+    <thead>
+      <tr>
+        <th>Bug ID</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Severity</th>
+        <th>Steps to Reproduce</th>
+        <th>Status</th>
+        <th>Expected Result</th>
+        <th>Actual Result</th>
+        <th>File Path</th>
+        <th>Tester ID</th>
+        <th>Developer ID</th>
+        <th>Created At</th>
+        <th>Updated At</th>
+        <th>Completed At</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let bug of displayedBugs">
+        <td>{{ bug.bugId }}</td>
+        <td>{{ bug.title }}</td>
+        <td>{{ bug.description }}</td>
+        <td>{{ bug.severity }}</td>
+        <td>{{ bug.stepsToReproduce }}</td>
+        <td>{{ bug.status }}</td>
+        <td>{{ bug.expectedResult }}</td>
+        <td>{{ bug.actualResult }}</td>
+        <td>{{ bug.filePath }}</td>
+        <td>{{ bug.testerId }}</td>
+        <td>{{ bug.developerId }}</td>
+        <td>{{ bug.createdAt }}</td>
+        <td>{{ bug.updatedAt }}</td>
+        <td>{{ bug.completedAt }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>-->
+
+
+
+
+
+<!--<div class="container">
+  <div class="card-header">
+    <input type="text" [(ngModel)]="searchQuery" placeholder="Search by bug title">
+  </div>
+  <div class="card-body flex fd_row jc_between">
+    <button class="btn btn-success" (click)="createBug()">
+      Create Bug
+    </button>
+    <button class="btn btn-danger" (click)="deleteSelectedBugs()">
+      Delete Selected Bugs
+    </button>
+  </div>
+  <table class="mat-elevation-z14 w-100">
+    <thead>
+      <tr>
+        <th>Bug ID</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Severity</th>
+        <th>Steps to Reproduce</th>
+        <th>Status</th>
+        <th>Expected Result</th>
+        <th>Actual Result</th>
+        <th>File Path</th>
+        <th>Tester ID</th>
+        <th>Developer ID</th>
+        <th>Created At</th>
+        <th>Updated At</th>
+        <th>Completed At</th>
+      </tr>
+      <tr>
+        <th>
+          <input type="text" [(ngModel)]="filterBugId" placeholder="Filter by Bug ID">
+        </th>
+        <th>
+          <input type="text" [(ngModel)]="filterTitle" placeholder="Filter by Title">
+        </th>
+        <th>
+          <input type="text" [(ngModel)]="filterDescription" placeholder="Filter by Description">
+        </th>
+        <th>
+          <select [(ngModel)]="filterSeverity">
+            <option value="">All</option>
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+          </select>
+        </th>
+        <th>
+          <input type="text" [(ngModel)]="filterStepsToReproduce" placeholder="Filter by Steps to Reproduce">
+        </th>
+        <th>
+          <select [(ngModel)]="filterStatus">
+            <option value="">All</option>
+            <option value="Open">Open</option>
+            <option value="In Progress">In Progress</option>
+            <option value="Closed">Closed</option>
+          </select>
+        </th>
+        <th>
+          <input type="text" [(ngModel)]="filterExpectedResult" placeholder="Filter by Expected Result">
+        </th>
+        <th>
+          <input type="text" [(ngModel)]="filterActualResult" placeholder="Filter by Actual Result">
+        </th>
+        <th>
+          <input type="text" [(ngModel)]="filterFilePath" placeholder="Filter by File Path">
+        </th>
+        <th>
+          <input type="text" [(ngModel)]="filterTesterId" placeholder="Filter by Tester ID">
+        </th>
+        <th>
+          <input type="text" [(ngModel)]="filterDeveloperId" placeholder="Filter by Developer ID">
+        </th>
+        <th>
+          <input type="text" [(ngModel)]="filterCreatedAt" placeholder="Filter by Created At">
+        </th>
+        <th>
+          <input type="text" [(ngModel)]="filterUpdatedAt" placeholder="Filter by Updated At">
+        </th>
+        <th>
+          <input type="text" [(ngModel)]="filterCompletedAt" placeholder="Filter by Completed At">
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let bug of filteredBugs">
+        <td>{{ bug.bugId }}</td>
+        <td>{{ bug.title }}</td>
+        <td>{{ bug.description }}</td>
+        <td>{{ bug.severity }}</td>
+        <td>{{ bug.stepsToReproduce }}</td>
+        <td>{{ bug.status }}</td>
+        <td>{{ bug.expectedResult }}</td>
+        <td>{{ bug.actualResult }}</td>
+        <td>{{ bug.filePath }}</td>
+        <td>{{ bug.testerId }}</td>
+        <td>{{ bug.developerId }}</td>
+        <td>{{ bug.createdAt }}</td>
+        <td>{{ bug.updatedAt }}</td>
+        <td>{{ bug.completedAt }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>-->
+
+
+
+<div class="container">
+  <div class="card-header flex jc_end">
+     <input type="text" [(ngModel)]="searchQuery" placeholder="Search by bug title" class="mr-2">
+     <button class="btn btn-success" (click)="createBug()">Create Bug</button>
+     <button class="btn btn-danger" (click)="deleteSelectedBugs()">Delete Selected Bugs</button>
+  </div>
+  <div class="card-body">
+     <table class="mat-elevation-z14 w-100">
+       <thead>
+         <tr>
+           <th>Select</th>
+           <th>Bug ID</th>
+           <th>Title</th>
+           <th>Description</th>
+           <th>Severity</th>
+           <th>Steps to Reproduce</th>
+           <th>Status</th>
+           <th>Expected Result</th>
+           <th>Actual Result</th>
+           
+           <th>Tester ID</th>
+           <th>Developer ID</th>
+           <th>FilePath</th>
+           <th>Created At</th>
+           <th>Updated At</th>
+           <th>Completed At</th>
+         </tr>
+         <tr>
+           <th></th>
+           <th>
+             <input type="text" [(ngModel)]="filterBugId" placeholder="Filter by Bug ID">
+           </th>
+           <th></th>
+           <th></th>
+           <th>
+             <select [(ngModel)]="filterSeverity">
+               <option value="">All</option>
+               <option value="Low">Low</option>
+               <option value="Medium">Medium</option>
+               <option value="High">High</option>
+             </select>
+           </th>
+           <th></th>
+           <th>
+             <select [(ngModel)]="filterStatus">
+               <option value="">All</option>
+               <option value="Open">Open</option>
+               <option value="In Progress">In Progress</option>
+               <option value="Closed">Closed</option>
+             </select>
+           </th>
+           <th></th>
+           <th></th>
+           <th>
+             <input type="text" [(ngModel)]="filterTesterName" placeholder="Filter by Tester Name">
+           </th>
+           <th>
+             <input type="text" [(ngModel)]="filterDeveloperName" placeholder="Filter by Developer Name">
+           </th>
+           <th></th>
+           <th></th>
+           <th></th>
+         </tr>
+       </thead>
+       <tbody>
+         <tr *ngFor="let bug of filteredBugs">
+           <td>
+             <input type="radio" [(ngModel)]="selectedBugId" [value]="bug.bugId">
+           </td>
+           <td>{{ bug.bugId }}</td>
+           <td>{{ bug.title }}</td>
+           <td>{{ bug.description }}</td>
+           <td>{{ bug.severity }}</td>
+           <td>{{ bug.stepsToReproduce }}</td>
+           <td>{{ bug.status }}</td>
+           <td>{{ bug.expectedResult }}</td>
+           <td>{{ bug.actualResult }}</td>
+           <td>{{ bug.filePath }}</td>
+           <td>{{ bug.testerName }}</td>
+           <td>{{ bug.developerName}}</td>
+           <td>{{ bug.createdAt }}</td>
+           <td>{{ bug.updatedAt }}</td>
+           <td>{{ bug.completedAt }}</td>
+         </tr>
+       </tbody>
+     </table>
+  </div>
+ </div>
+
+
+x

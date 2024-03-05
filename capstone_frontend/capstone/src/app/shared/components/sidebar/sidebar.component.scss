@@ -1,0 +1,28 @@
+
+#sidebar{
+    width: 200px;
+    height:100vh;
+    background-color: #3545c0;
+    // padding: 20px;
+    box-sizing: border-box;
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            a {
+                display: block;
+                padding: 20px;
+                text-decoration: none;
+                color: #f5efef;
+                font-size: 22px;
+
+                &:hover {
+                    background-color: #8fa4ec;
+                }
+            }
+        }
+    }
+}

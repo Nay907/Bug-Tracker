@@ -1,0 +1,35 @@
+<div class="col-sm-7 authfy-panel-right">
+    <div class="authfy-login">
+        <div class="authfy-panel panel-login text-center active">
+            <div class="authfy-heading pe-4">
+                <h3 class="auth-title">Register a new account</h3>
+                <p>
+                    Already Have Account?
+                    <a class="lnk-toggler" data-panel=".panel-login">Login In</a>
+                </p>
+            </div>
+            <form [formGroup]="registerForm" (submit)="registerUser(registerForm)">
+                <div class="form-group">
+                    <input type="text" class="form-control" name="username" required placeholder="Username" formControlName="userName"/>
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" name="emailId" required placeholder="Email address" formControlName="emailID"/>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" name="password" required placeholder="Password" formControlName="password"/>
+                </div>
+                <div class="form-group">
+                    <select formControlName="userRole">
+                        <option value="">Select User Role...</option>
+                        <option value="Admin">Admin</option>
+                        <option value="Tester">Tester</option>
+                        <option value="Developer">Developer</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

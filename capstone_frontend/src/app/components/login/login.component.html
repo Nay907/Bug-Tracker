@@ -1,0 +1,50 @@
+<div class="container h-100 d-flex justify-content-center align-items-center">
+  <div class="col-sm-7 authfy-panel-right">
+    <div class="authfy-login">
+      <div class="authfy-panel panel-login text-center active">
+        <div class="authfy-heading pe-4">
+          <h3 class="auth-title">Login to your account</h3>
+          <p class="d-flex flex-column">
+            Already Have Account?
+            <a class="lnk-toggler" data-panel=".panel-signup">Login</a>
+            <a class="lnk-toggler" data-panel=".panel-signup" routerLink="/register">Register</a>
+          </p>
+        </div>
+        <form
+          class="loginForm"
+          [formGroup]="loginForm"
+          (submit)="login(loginForm)"
+        >
+          <div class="form-group">
+            <input
+              type="email"
+              formControlName="email"
+              class="form-control email my-2"
+              name="emailId"
+              required
+              placeholder="Email address"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="password"
+              formControlName="password"
+              class="form-control password"
+              name="password"
+              required
+              placeholder="Password"
+            />
+          </div>
+          <div
+            class="row remember-row d-flex justify-content-between pt-4 me-5"
+          ></div>
+          <div class="form-group">
+            <button class="btn btn-lg btn-primary btn-block">
+              Login with email
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+/* styles.css */
+
+@import '../../shared/shared-styles/shared-styles.scss';
+
+.authfy-panel-right {
+    background-color: rgb(171, 166, 166);
+    width: 60vh;
+    padding-left: 60px;
+}
+
+.authfy-login {
+    padding-left: 60px;
+}
+
+.authfy-heading {
+    margin-right: 64px;
+    padding-top: 25px;
+}
+
+.form-group {
+    box-sizing: border-box;
+    box-shadow: skyblue;
+}
+
+.form-check-input {
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+}
+
+.btn-lg {
+    margin-right: 90px;
+}

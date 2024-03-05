@@ -1,0 +1,68 @@
+<div class="row">
+    <div class="col-12 text-end">
+        <button class="btn btn-success btn-sm"  data-bs-toggle="modal" data-bs-target="#myModal">Create New User</button>
+    </div>
+</div>
+<div class="row">
+    <div class="col-3" *ngFor="let user of userList">
+        <div class="card">
+            <div class="card-header bg-success">
+                {{user.emailId}}
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-6">
+                        {{user.username}}
+                    </div>
+                    <div class="col-6">
+                        {{user.password }}
+                    </div>
+                </div>
+              
+            </div>
+            <div class="card-footer">
+                <div class="row">
+                    <div class="col-6">
+                        <button class="btn btn-success btn-sm">Edit</button>
+                    </div>
+                    <div class="col-6">
+                        <button class="btn btn-danger btn-sm" >Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content"> 
+        <div class="modal-header">
+          <h4 class="modal-title">New user</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div> 
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-6">
+                <label for="">EmailId</label>
+                <input type="text" formControlName="emailId" class="form-control">
+            </div>
+            <div class="col-6">
+                <label for="">Password</label>
+                <input type="text" formControlname="password" class="form-control">
+            </div>
+          </div>
+          <div class="row"> 
+            <div class="col-8">
+                <label for="">Full  Name</label>
+                <input type="text" formControlName="userName" class="form-control">
+            </div>
+          </div>
+        </div> 
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-danger">Save</button>
+        </div> 
+      </div>
+    </div>
+  </div>

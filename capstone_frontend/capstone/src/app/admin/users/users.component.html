@@ -1,0 +1,85 @@
+<!-- <div class="container">
+  <div class="card-header d-flex justify-content-end">
+     <form [formGroup]="userForm">
+       <input
+         type="text"
+         formControlName="searchQuery"
+         placeholder="Search by username"
+         class="mr-2"
+       />
+       <button class="btn btn-danger" (click)="deleteSelectedUsers()">
+         Delete Selected Users
+       </button>
+     </form>
+  </div>
+  <div class="card-body">
+     <table class="table">
+       <thead>
+         <tr>
+           <th scope="col">Select</th>
+           <th scope="col">User ID</th>
+           <th scope="col">Username</th>
+           <th scope="col">Email</th>
+           <th scope="col">Role</th>
+         </tr>
+       </thead>
+       <tbody>
+         <tr *ngFor="let user of filteredUsers">
+           <td>
+             <input
+               type="radio"
+               formControlName="selectedUserId"
+               [value]="user.userId"
+             />
+           </td>
+           <td>{{ user.userId }}</td>
+           <td>{{ user.username }}</td>
+           <td>{{ user.emailId }}</td>
+           <td>{{ user.access }}</td>
+         </tr>
+       </tbody>
+     </table>
+  </div>
+ </div>
+  -->
+
+
+  <div class="container">
+    <div class="card-header d-flex justify-content-end">
+        <form [formGroup]="userForm">
+          <input
+            type="text"
+            formControlName="searchQuery"
+            placeholder="Search by username"
+            class="mr-2"
+          />
+        </form>
+    </div>
+    <div class="card-body">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">User ID</th>
+              <th scope="col">Username</th>
+              <th scope="col">Email</th>
+              <th scope="col">Role</th>
+              <th scope="col">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let user of filteredUsers">
+              <td>{{ user.userId }}</td>
+              <td>{{ user.username }}</td>
+              <td>{{ user.emailId }}</td>
+              <td>{{ user.access }}</td>
+              <td>
+                <button class="btn btn-danger" (click)="deleteUser(user.userId)">
+                  Delete
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+   </div>
+   

@@ -1,0 +1,140 @@
+
+<div class="container mt-3">
+  <div class="row">
+    <div class="col-12 text-end">
+      <button
+        class="btn btn-success btn-sm"
+        data-bs-toggle="modal"
+        data-bs-target="#myModal"
+      >
+        Create New Project
+      </button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-3" *ngFor="let project of projectList">
+      <div class="card mb-3">
+        <div class="card-header bg-success text-white">
+          {{ project.shortName }}
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">{{ project.projectName }}</h5>
+        </div>
+        <div class="card-footer">
+          <button
+            class="btn btn-success btn-sm"
+            data-bs-toggle="modal"
+            data-bs-target="#editModal"
+            (click)="storeID(project.projectId)"
+          >
+            Edit
+          </button>
+          <button
+            class="btn btn-danger btn-sm"
+            (click)="deleteProject(project.projectId)"
+          >
+            Delete
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">New Project</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="projectForm">
+          <div class="mb-3">
+            <label for="shortName" class="form-label">Short Name</label>
+            <input
+              type="text"
+              formControlName="shortName"
+              class="form-control"
+              id="shortName"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="projectName" class="form-label">Full Name</label>
+            <input
+              type="text"
+              formControlName="projectName"
+              class="form-control"
+              id="projectName"
+            />
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary" (click)="onSave()">
+              Save
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="editModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Edit Project</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="editForm" (submit)="editProject(editForm)">
+          <div class="mb-3">
+            <label for="shortName" class="form-label">Short Name</label>
+            <input
+              type="text"
+              formControlName="shortName"
+              class="form-control"
+              id="shortName"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="projectName" class="form-label">Full Name</label>
+            <input
+              type="text"
+              formControlName="projectName"
+              class="form-control"
+              id="projectName"
+            />
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="submit" class="btn btn-primary">
+              Save
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

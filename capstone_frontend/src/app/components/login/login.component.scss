@@ -1,0 +1,75 @@
+/* styles.css */
+
+@import '../../shared/shared-styles/shared-styles.scss';
+
+.main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.authfy-panel-left {
+    background-color: rgba(38, 43, 72, 0.92);
+    color: #ffffff;
+    border-radius: 4px;
+    box-shadow: 0px 3px 6px #1d2030;
+    width: 100vh;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-facebook {
+    background: #7290d0;
+}
+
+.btn-twitter {
+    background: #00aced;
+}
+
+.btn-google {
+    background: red;
+}
+
+.authfy-panel-right {
+    background-color: rgb(171, 166, 166);
+    width: 60vh;
+    padding-left: 60px;
+}
+
+.remember-box {
+    padding-right: 60px;
+}
+
+.btn-lg {
+    margin-right: 90px;
+}
+
+.authfy-login {
+    padding-left: 60px;
+}
+
+.authfy-heading {
+    margin-right: 64px;
+    padding-top: 25px;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group {
+    box-sizing: border-box;
+    box-shadow: skyblue;
+}
+
+.eyeicon {
+    position: absolute;
+    margin-left: 320px;
+    cursor: pointer;
+}

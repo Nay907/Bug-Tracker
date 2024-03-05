@@ -1,0 +1,40 @@
+<button class="btn btn-primary" (click)="showChart1()">Show Chart</button>
+<button class="btn btn-danger ml-2" *ngIf="showChartFlag1" (click)="closeChart1()">Close Chart</button>
+<div *ngIf="showChartFlag1">
+  <canvas #bugChartCanvas></canvas>
+</div>
+<div class="card">
+    <div class="card-header">
+      Total Bug Count
+    </div>
+    <div class="card-body">
+      <p>{{ totalBugCount }}</p>
+    </div>
+  </div>
+  
+  <div class="card">
+    <div class="card-header">
+      Bug Count by Severity: Low
+    </div>
+    <div class="card-body">
+      <p>{{ bugCountByLowSeverity }}</p>
+    </div>
+  </div>
+  
+  <div class="card">
+    <div class="card-header">
+      Bug Count by Severity: Medium
+    </div>
+    <div class="card-body">
+      <p>{{ bugCountByMediumSeverity }}</p>
+    </div>
+  </div>
+  
+  <div class="card">
+    <div class="card-header">
+      Bug Count by Severity: High
+    </div>
+    <div class="card-body">
+      <p>{{ bugCountByHighSeverity }}</p>
+    </div>
+  </div>
